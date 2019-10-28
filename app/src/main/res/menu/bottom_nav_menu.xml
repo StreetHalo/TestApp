@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home_menu_item"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/home" />
+    <item
+        android:id="@+id/markets_menu_item"
+        android:icon="@drawable/ic_show_chart_black_24dp"
+        android:title="@string/markets" />
+    <item
+        android:id="@+id/trades_menu_item"
+        android:icon="@drawable/ic_import_export_black_24dp"
+        android:title="@string/exchange" />
+    <item
+        android:id="@+id/reports_menu_item"
+        android:icon="@drawable/ic_reports"
+        android:title="@string/orders" />
+    <item
+        android:id="@+id/account_menu_item"
+        android:icon="@drawable/ic_account_balance_wallet_black_24dp"
+        android:title="@string/account" />
+</menu>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">TestApp</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="home">Home</string>
+    <string name="exchange">Exchange</string>
+    <string name="markets">Markets</string>
+    <string name="orders">Orders</string>
+    <string name="account">Account</string>
+</resources>
