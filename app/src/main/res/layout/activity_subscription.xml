@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#363636"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/textView42"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bg_subscription" />
+
+    <ImageView
+        android:id="@+id/premium_ic_close"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView14"
+        app:layout_constraintTop_toTopOf="@+id/imageView14"
+        app:srcCompat="@drawable/ic_cross" />
+
+
+    <TextView
+        android:id="@+id/textView42"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/roboto_rg"
+        android:text="@string/premium_subscribe"
+        android:textColor="@color/rd_text"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView23"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView14" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/roboto_rg"
+        android:gravity="center"
+        android:text="@string/trade_on_all_currency_pairs_with_no_restrictions"
+        android:textColor="@color/rd_text"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView42" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/premium_btn_buy"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="#d6a503"
+        app:cardBackgroundColor="#d6a503"
+        app:layout_constraintBottom_toTopOf="@+id/textView66"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView23">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView65"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/try_subscribtions_button"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tw_trial_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/days_trial"
+                android:textColor="@color/white"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView66"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:text="@string/subscribtion_terms"
+        android:textColor="@color/white"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_privacy_policy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_privacy_policy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:lineSpacingExtra="11sp"
+        android:padding="8dp"
+        android:text="@string/privacy_policy_underlined"
+        android:textColor="#f0b90b"
+        android:textSize="9sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textView24"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_terms_of_use"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:lineSpacingExtra="11sp"
+        android:padding="8dp"
+        android:text="@string/terms_of_use_underlined"
+        android:textColor="#f0b90b"
+        android:textSize="9sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_privacy_policy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView24"
+        app:layout_constraintTop_toTopOf="@+id/tv_privacy_policy" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:lineSpacingExtra="11sp"
+        android:text="&amp;"
+        android:textColor="#f0b90b"
+        android:textSize="9sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_privacy_policy"
+        app:layout_constraintEnd_toStartOf="@+id/tv_terms_of_use"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv_privacy_policy"
+        app:layout_constraintTop_toTopOf="@+id/tv_privacy_policy" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

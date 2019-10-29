@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/buysell_line"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/detail_symbol_buy"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/ripple_buy_button"
+            android:text="@string/buy"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/detail_symbol_sell"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/ripple_sell_button"
+            android:text="@string/sell"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/buysell_line"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/layout_symbol_appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background2"
+            android:elevation="0dp"
+            app:elevation="0dp">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/coordinator_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+
+                <LinearLayout
+                    android:id="@+id/detail_scroll_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/background2"
+                    android:orientation="vertical"
+                    android:paddingTop="40dp"
+                    app:layout_collapseMode="none">
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:background="@color/colorPrimaryDark">
+
+                        <TextView
+                            android:id="@+id/detail_symbol_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            app:layout_constraintBottom_toTopOf="@+id/detail_symbol_diff_percents"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:text="0.0000" />
+
+                        <TextView
+                            android:id="@+id/detail_symbol_diff"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:text="- 0.000"
+                            android:textColor="@color/red"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toBottomOf="@+id/detail_symbol_diff_percents"
+                            app:layout_constraintStart_toEndOf="@+id/detail_symbol_diff_percents"
+                            app:layout_constraintTop_toTopOf="@+id/detail_symbol_diff_percents" />
+
+                        <TextView
+                            android:id="@+id/detail_symbol_diff_percents"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:text="-0.00%"
+                            android:textColor="@color/red"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/detail_symbol_price" />
+
+                        <TextView
+                            android:id="@+id/text_low"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toTopOf="@+id/text_high"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/detail_symbol_volume"
+                            tools:text="high_4150_1" />
+
+                        <TextView
+                            android:id="@+id/text_high"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginBottom="4dp"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/text_low"
+                            tools:text="low_3733_3" />
+
+                        <TextView
+                            android:id="@+id/detail_symbol_volume"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginEnd="8dp"
+                            android:textSize="12sp"
+                            app:layout_constraintBottom_toTopOf="@+id/text_low"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_chainStyle="spread_inside"
+                            tools:text="vol_24h_btc" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingTop="8dp"
+                        android:paddingEnd="8dp"
+                        android:paddingBottom="8dp">
+                        <View
+                            android:id="@+id/anchor_popup_left"
+                            android:layout_width="1dp"
+                            android:layout_marginRight="7dp"
+                            android:layout_gravity="bottom"
+                            android:layout_height="1dp"/>
+
+                        <ImageButton
+                            android:id="@+id/btn_chart_settings_candles"
+                            android:layout_width="40dp"
+                            android:layout_height="32dp"
+                            android:background="@drawable/btn_chart_settings_candles_background"
+                            android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                            android:gravity="center"
+                            android:src="@drawable/ic_candles"/>
+
+                        <ImageButton
+                            android:id="@+id/btn_chart_settings_line"
+                            android:layout_width="40dp"
+                            android:layout_height="32dp"
+                            android:background="@drawable/btn_chart_settings_middle_background"
+                            android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                            android:gravity="center"
+                            android:src="@drawable/rd_line_chart_icon" />
+
+                        <ImageButton
+                            android:id="@+id/btn_chart_settings_depth"
+                            android:layout_width="40dp"
+                            android:layout_height="32dp"
+                            android:background="@drawable/btn_chart_settings_depth_background"
+                            android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                            android:src="@drawable/ic_depth" />
+
+                        <Space
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <TextView
+                            android:id="@+id/btn_chart_settings_period"
+                            android:layout_width="40dp"
+                            android:layout_height="32dp"
+                            android:background="@drawable/btn_chart_settings_single_background"
+                            android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                            android:gravity="center"
+                            android:textColor="@color/button_filter_textcolor"
+                            android:textSize="12sp"
+                            tools:text="H1" />
+
+                        <TextView
+                            android:id="@+id/btn_chart_settings_indicatiors"
+                            android:layout_width="80dp"
+                            android:layout_height="32dp"
+                            android:layout_marginLeft="8dp"
+                            android:background="@drawable/btn_chart_settings_single_background"
+                            android:foreground="?android:attr/selectableItemBackgroundBorderless"
+                            android:gravity="center"
+                            android:text="@string/indicators"
+                            android:textColor="@color/button_filter_textcolor"
+                            android:textSize="12sp" />
+
+                        <ImageButton
+                            android:id="@+id/btn_chart_settings_fullscreen"
+                            android:layout_width="40dp"
+                            android:layout_height="32dp"
+                            android:layout_marginLeft="8dp"
+                            android:background="@drawable/btn_chart_settings_single_background"
+                            android:gravity="center"
+                            android:src="@drawable/ic_fullscreen"
+                            android:textColor="@color/button_filter_textcolor"/>
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:id="@+id/detail_candles_host"
+                        android:layout_width="match_parent"
+                        android:layout_height="260dp"
+                        android:layout_marginBottom="8dp" >
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="1dp"
+                            android:layout_gravity="end|bottom"
+                            android:layout_marginBottom="100dp"
+                            android:layout_marginEnd="54dp"
+                            android:id="@+id/fastScrollAnchor"
+                            />
+
+                        <ProgressBar
+                            android:id="@+id/pb_charts"
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </FrameLayout>
+
+                    <com.google.android.material.tabs.TabLayout
+                        android:id="@+id/detail_symbol_markets_tab"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:tabIndicatorColor="@color/colorAccent"
+                        app:tabIndicatorFullWidth="false"
+                        app:tabSelectedTextColor="@color/white"
+                        app:tabTextAppearance="@style/StyleSymbolDetailText"
+                        app:tabTextColor="@color/gray_50" />
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar_market"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="@color/colorPrimaryDark"
+                    app:contentInsetStart="0dp"
+                    app:layout_collapseMode="pin">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/detail_symbol_back"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical|start"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:clickable="true"
+                            android:drawableLeft="@drawable/ic_arrow_back_white"
+                            android:drawablePadding="-4dp"
+                            android:focusable="true"
+                            android:gravity="center"
+                            android:drawableTint="@color/gray_50"
+                            android:paddingLeft="8dp"
+                            android:textColor="@color/gray_50"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/detail_symbol_title"
+                            android:layout_width="150dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/btn_search_background"
+                            android:drawableLeft="@drawable/ic_search_gray"
+                            android:drawablePadding="12dp"
+                            android:gravity="center"
+                            android:paddingLeft="8dp"
+                            android:paddingTop="4dp"
+                            android:paddingRight="12dp"
+                            android:singleLine="true"
+                            android:paddingBottom="4dp"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:text="BTC/USD" />
+
+                        <ImageButton
+                            android:id="@+id/btn_notification"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical|end"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:paddingLeft="4dp"
+                            android:paddingTop="8dp"
+                            android:paddingRight="8dp"
+                            android:paddingBottom="8dp"
+                            android:src="@drawable/ic_add_alert"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageButton
+                            android:id="@+id/btn_favorite"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical|end"
+                            android:layout_marginEnd="8dp"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:paddingStart="8dp"
+                            android:paddingTop="8dp"
+                            android:paddingEnd="8dp"
+                            android:paddingBottom="8dp"
+                            android:src="@drawable/ic_vip"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.appcompat.widget.Toolbar>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <com.example.testapp.views.NonSwipeableViewPager
+            android:id="@+id/detail_host"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</RelativeLayout>

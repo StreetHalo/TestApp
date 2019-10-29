@@ -1,37 +1,138 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingTop="?attr/actionBarSize">
+>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:elevation="4dp"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/trades_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                app:contentInsetStart="0dp">
+
+                <trade.paper.app.views.CustomSearchView
+                    android:id="@+id/csv_search_markets"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    app:csv_hintText="@string/search_currency" />
+
+            </androidx.appcompat.widget.Toolbar>
+
+            <trade.paper.app.views.IndentedTabLayout
+                android:id="@+id/markets_tab_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:clipToPadding="false"
+                app:tabGravity="fill"
+                app:tabMode="scrollable"
+                app:tabIndicatorColor="@color/colorAccent"
+                app:tabIndicatorHeight="1dp"
+                app:tabSelectedTextColor="@color/white"
+                app:tabTextAppearance="@style/HomeTabWithoutCaps"
+                app:tabTextColor="@color/gray_50" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/background2">
+
+            <TextView
+                android:id="@+id/tv_name_vol_markets"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|start"
+                android:layout_marginStart="28dp"
+                android:textColor="@color/gray_50"
+                android:textSize="12sp"
+                tools:text="Name/Vol 24h" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginEnd="112dp"
+                android:gravity="end"
+                android:text="@string/price"
+                android:textColor="@color/gray_50"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginEnd="40dp"
+                android:gravity="end"
+                android:text="@string/change"
+                android:textColor="@color/gray_50"
+                android:textSize="12sp" />
+
+            <ImageButton
+                android:id="@+id/btn_filter_markets"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:padding="8dp"
+                android:src="@drawable/ic_filter" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="bottom"
+                android:alpha="0.5"
+                android:background="@color/separator" />
+        </FrameLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/markets_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background2"
+            android:visibility="gone" />
+
+        <ProgressBar
+            android:id="@+id/markets_loader"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="200dp" />
+    </LinearLayout>
+
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_nav"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:layout_gravity="bottom"
+        android:background="@color/border_gray"
+        app:itemIconTint="@color/bottom_nav_color"
+        app:itemTextColor="@color/bottom_nav_color"
         app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/bottom_nav_menu" />
-    <TextView
-        android:id="@+id/nav_host_fragment"
-        android:name="androidx.navigation.fragment.NavHostFragment"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginRight="32dp"
-        android:layout_marginBottom="32dp"
-        android:text="Markets"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@id/bottom_nav"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.452" />
+        app:menu="@menu/bottom_menu_nav" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

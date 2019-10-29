@@ -1,11 +1,404 @@
 <resources>
-    <string name="app_name">TestApp</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="facebook_app_id">1019311001749624</string>
+    <string name="app_name" translatable="false">TestApp</string>
+    <string name="tag_lifecycle">Lifecycle</string>
+    <string name="no_connection_msg">No internet connection. Please try again.</string>
+    <string name="refresh_msg">Refresh</string>
+    <string name="waiting_for_network">Waiting for network…</string>
+    <string name="profile">Profile</string>
+    <string name="markets">Markets</string>
+    <string name="account">Account</string>
+    <string name="trades">Trades</string>
+    <string name="no_active_orders">No Orders</string>
+    <string name="cancel_underline"><u>Cancel</u></string>
+    <string name="active_orders">My Orders</string>
+    <string name="order_history">My Trades</string>
+    <string name="no_orders">No Orders</string>
+    <string name="market">Market</string>
+    <string name="wrong_divisible">The amount should be divisible by %s</string>
+    <string name="empty_order_history">No Trades</string>
+    <string name="order_cancelled_msg">Order cancelled</string>
+    <string name="second_step_instruction"><![CDATA[Go to Settings -> API Keys]]></string>
+    <string name="third_step_instruction">Click \'\'New API key button\'\'</string>
+    <string name="fourth_step_instruction">For the new key you just created, turn all four access rights checkboxes on. Some checkboxes will require email confirmation. You need all 4 checkboxes activated in order to use this app.</string>
+    <string name="fifth_step_instruction">After all checkboxes are \'\'on\'\', you can copy both keys (secret key will be sent to your email).</string>
+    <string name="date_formatter_pattern">yyyy-MM-dd\'T\'HH:mm:ss.SSS\'Z\'</string>
+    <string name="p_request">Next you should scan QR Code \nwith Secret key. You can find it in \nyour E-Mail.</string>
+    <string name="withdrawals_for_this_currency_are_offline"><![CDATA[Withdrawals for this currency are offline.<br><br><br>Please refer to the <font color="#52A3CC">System Monitor</font> <br>page for updates.]]></string>
+    <string name="notifications_channel" translatable="false">notification_channel</string>
+    <string name="pin_request">Set up PIN code</string>
+    <string name="pin_repeat">Repeat PIN code</string>
+    <string name="pin_common">Enter PIN code</string>
+    <string name="pin_old">Enter your current PIN code</string>
+    <string name="search">Search</string>
+    <string name="api_keys_request">Enter API keys</string>
+    <string name="how_get_keys_for_login">How do I get keys for login?</string>
+    <string name="public_key_hint">API key</string>
+    <string name="private_key_hint">Secret key</string>
+    <string name="confirm">Confirm</string>
+    <string name="login_via_qr">Login via QR code</string>
+    <string name="scan_qr_code">Scan QR Code to login</string>
+    <string name="payment_history">History</string>
+    <string name="estimated_value">BALANCE</string>
+    <string name="deposit">Deposit</string>
+    <string name="deposits">Deposits</string>
+    <string name="withdraw">Withdraw</string>
+    <string name="withdraws">Withdrawals</string>
+    <string name="transfers">Transfers</string>
+    <string name="hide_zero_balances">Hide zero balances</string>
+    <string name="currency">Currency</string>
+    <string name="main">Main</string>
+    <string name="trading">Trading</string>
+    <string name="balance">Balance</string>
+    <string name="main_account">Main account</string>
+    <string name="trading_account">Trading account</string>
+    <string name="in_orders">On orders</string>
+    <string name="estimated_btc">Estimated BTC</string>
+    <string name="estimated_usd">Estimated USD</string>
+    <string name="history">History</string>
+    <string name="payment_id">Payment ID</string>
+    <string name="copy_address">Copy address</string>
+    <string name="copy_payment_id">Copy payment id</string>
+    <string name="create_new">Create new</string>
+    <string name="show_qr_code">Show QR Code</string>
+    <string name="deposits_for_this_currency_are_offline">Deposits for this currency are offline</string>
+
+    <string name="executed">Executed</string>
+    <string name="how_to_getkeys_for_login"><![CDATA[<u>How do I get keys for login?</u>]]></string>
+    <string name="loading">Loading…</string>
+    <string name="new_notification">New Notification!</string>
+    <string name="buy">Buy</string>
+    <string name="sell">Sell</string>
+    <string name="copy">Copy</string>
+    <string name="copied_to_clipboard">%s copied to clipboard</string>
+    <string name="destination_tag">DestinationTag</string>
+    <string name="address_copied">Address copied to clipboard</string>
+    <string name="deposit_address">Deposit address</string>
+    <string name="depth">Depth</string>
+    <string name="pair_removed_from_favorites">Pair removed from favorites</string>
+    <string name="pair_added_to_favorites">Pair added to favorites</string>
+    <string name="line">Line</string>
+    <string name="low">Low</string>
+    <string name="high">High</string>
+    <string name="volume">Volume</string>
+    <string name="available_short">Avbl</string>
+    <string name="new_ordr_id">New Order ID</string>
+    <string name="min_amount_is">Minimum amount is</string>
+    <string name="cancel_order_question">Cancel order?</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="wrong_qr_message">Wrong QR Code, please try another one</string>
+    <string name="wrong_qr_currency_message">This is not adress for %s, please try another one</string>
+    <string name="wrong_qr_short">Wrong QR Code</string>
+    <string name="something_wrong">Something went wrong, please try again later</string>
+    <string name="retry">Retry</string>
+    <string name="withdrawal_complete">Withdrawal complete</string>
+    <string name="transaction_id_copied">transaction id copied into clipboard</string>
+    <string name="access_denied">Access denied</string>
+    <string name="activate_api_keys_mesage">Please activate full access for your API keys. Your need to turn on all access checkboxes</string>
+    <string name="disable_pin_message">Disable PIN?</string>
+    <string name="continie_question">Continue?</string>
+    <string name="ping_change_title">PIN changing</string>
+    <string name="depost_address">Deposit Address</string>
+    <string name="addres_from_qr">Fill address from QR-code</string>
+    <string name="scan_qr">Scan QR</string>
+    <string name="no_history">No History</string>
+    <string name="go_to_trading">Go To Trading</string>
+    <string name="price_level">Price level</string>
+    <string name="pin_tries_over">Allowed only 3 tries per minute\n\n %d seconds left</string>
+    <string name="login_expected">Please log in to view orders</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="cancel_dialog">Cancel</string>
+    <string name="cannot_upload">Cannot upload data</string>
+    <string name="fill_withdrawal">Please fill withdrawal address</string>
+    <string name="valid_range">Please select a valid data range</string>
+    <string name="can_change_in_settings">You can change it in settings</string>
+    <string name="get_deposit_err">Error: cannot get deposit address</string>
+    <string name="transaction_prohibited">Transaction prohibited</string>
+    <string name="balance_forbidden">Balance is forbidden for this API key</string>
+    <string name="notification">Notification</string>
+    <string name="waiting_for_connection">Offline. Waiting for connection...</string>
+    <string name="market_time">Market/Time</string>
+    <string name="price">Price</string>
+    <string name="amount">Amount</string>
+    <string name="stop_price">Stop Price</string>
+    <string name="total">Total</string>
+    <string name="fee">Fee</string>
+    <string name="address">Address</string>
+    <string name="no_symbol_selected">No symbol selected</string>
+    <string name="order_book">Order Book</string>
+    <string name="times_amp_sales"><![CDATA[Time & Sales]]></string>
+    <string name="select_currency">Select currency</string>
+    <string name="order_filter">Order Filter</string>
+    <string name="date">Date</string>
+    <string name="day">day</string>
+    <string name="week">week</string>
+    <string name="month">month</string>
+    <string name="_3_months">3 months</string>
+    <string name="pair">Pair</string>
+    <string name="type">Type</string>
+    <string name="buy_and_sell">Buy and sell</string>
+    <string name="reset">reset</string>
+    <string name="accept">Accept</string>
+    <string name="accept_eng">Accept</string>
+    <string name="my_trades_detail">My trades detail</string>
+    <string name="total_cost">Total Cost</string>
+    <string name="time">Time</string>
+    <string name="please_input_keywords">Please input keywords</string>
+    <string name="start">Start:</string>
+    <string name="end">End:</string>
+    <string name="name">Name</string>
+    <string name="_24h_chg">24h Chg%</string>
+    <string name="about_and_licenses">About and licenses</string>
+    <string name="open_source_licenses">Open Source Licenses</string>
+    <string name="build_version">Build version</string>
+    <string name="price_caps">PRICE</string>
+    <string name="amount_caps">AMOUNT</string>
+    <string name="eth_deposit_adress">ETH Deposit address</string>
+    <string name="select_lang">Select language</string>
+    <string name="log_out">Log out</string>
+    <string name="support">Support</string>
+    <string name="languages">Languages</string>
+    <string name="pin">PIN</string>
+    <string name="pin_enabled">PIN enabled</string>
+    <string name="favorites">Favorites</string>
+    <string name="rebate">Rebate</string>
+    <string name="search_currency">Search currency</string>
+    <string name="unknown">Unknown</string>
+    <string name="unconfirmed">Unconfirmed</string>
+    <string name="failed">Failed</string>
+    <string name="confirmed">Confirmed</string>
+    <string name="available">Available</string>
+    <string name="you_will_receive">You will receive</string>
+    <string name="transfer">Transfer</string>
+    <string name="from">From</string>
+    <string name="to">To</string>
+    <string name="indicators">Indicators</string>
+    <string name="select">Select</string>
+    <string name="select_period">Select period</string>
+    <string name="top_indicators">Top</string>
+
+    <string name="bottom_indicators">Bottom</string>
+    <string name="save">Save</string>
+    <string name="group_by_price">Group by price</string>
+    <string name="search_currency_pair">Search currency pair</string>
+    <string name="change">Change</string>
+    <string name="last_price">Last price</string>
+    <string name="settings">Settings</string>
+    <string name="success">Success</string>
+    <string name="share">Share</string>
+    <string name="reports">Reports</string>
     <string name="home">Home</string>
     <string name="exchange">Exchange</string>
-    <string name="markets">Markets</string>
+    <string name="filter">Filter</string>
+    <string name="search_order_hint">Try BTC/USD</string>
+    <string name="active_orders_rd">Active orders</string>
+    <string name="active">Active</string>
+    <string name="filled_and_cancelled">Filled &amp; Cancelled</string>
+
+    <string name="filled_orders">Filled orders</string>
+    <string name="my_trades">My trades</string>
+    <string name="cancel">Cancel</string>
+    <string name="time_pair">Time/Pair</string>
+    <string name="trade_detailes">Trade detailes</string>
+    <string name="close">Close</string>
+    <string name="start_date">Start</string>
+    <string name="end_date">End</string>
+    <string name="side">Side</string>
+    <string name="all">All</string>
+    <string name="today">Today</string>
+    <string name="yesterday">Yesterday</string>
+    <string name="one_week">1 week</string>
+    <string name="custom">Custom</string>
+    <string name="no_trades">No trades</string>
+    <string name="volume_short">Vol.</string>
+    <string name="charts">Charts</string>
+    <string name="place_order">Place order</string>
+    <string name="order_market">Market order</string>
+    <string name="order_limit">Limit order</string>
+    <string name="order_scaled">Scaled</string>
+    <string name="estimated_best_price">Est. best price</string>
+    <string name="price_step">Price Step</string>
+    <string name="price_min">Price Min</string>
+    <string name="price_max">Price Max</string>
+    <string name="est_best_buy_price">Est. best buy price</string>
+    <string name="est_best_sell_price">Est. best sell price</string>
+    <string name="limit">Limit</string>
+    <string name="the_most_advanced_crypto_exchange">The most advanced crypto exchange</string>
+    <string name="skip_now">Skip now</string>
+    <string name="login_to_see_your_balance">Login to see your balance</string>
     <string name="orders">Orders</string>
-    <string name="account">Account</string>
+    <string name="support_center">Support Center</string>
+    <string name="fees_and_limits">Fees and Limits</string>
+    <string name="value">value</string>
+    <string name="top_vol24">Top Vol 24h</string>
+    <string name="vol24">Vol 24h</string>
+    <string name="gainers">Gainers</string>
+    <string name="losers">Losers</string>
+    <string name="logout_confirmation">Your PIN will be reset after a logout. Are you sure you want to log out?</string>
+    <string name="price_lvl">Price Level</string>
+    <string name="amount_not_a_valid">Amount not a valid number</string>
+    <string name="empty_key">Please paste %s key</string>
+    <string name="transactions_not_found">Transactions not found</string>
+    <string name="taker_fee">Taker fee</string>
+    <string name="maker_fee">Maker fee</string>
+    <string name="time_transaction">Time/Transaction</string>
+    <string name="status">Status</string>
+    <string name="to_main">To main</string>
+    <string name="to_trading">To trading</string>
+    <string name="empty_field_trading">Please specify %s</string>
+    <string name="empty_payment_id">Payment ID is not allowed to be empty</string>
+    <string name="insufficient_funds">Insufficient funds</string>
+    <string name="undefined">Undefined</string>
+    <string name="unlogined_home_text">The most advanced\ncrypto exchange. Now on mobile.</string>
+    <string name="connect_your_account">Connect your Account</string>
+    <string name="add_favorite_pairs">Add favorite pairs</string>
+    <string name="log_in">Log in</string>
+    <string name="popular_pair_to_trade">Popular pairs to trade</string>
+    <string name="view_all_pairs">View more pairs</string>
+    <string name="payment_history_account">Payment history</string>
+    <string name="transfer_between_accs">Transfer between accounts</string>
+    <string name="select_order_type">Select Order Type</string>
+    <string name="time_in_force">Time In Force</string>
+    <string name="time_gtdt_problem">Time can not be in the past</string>
+    <string name="gtc">Good-Till-Cancelled</string>
+    <string name="ioc">Immediate-Or-Cancel</string>
+    <string name="fok">Fill-Or-Kill</string>
+    <string name="gtdt">Good-Till-Date/Time</string>
+    <string name="gtdt_odred">Good-Till %s</string>
+    <string name="post_only">Post only</string>
+    <string name="u_day">Day</string>
+
+
+    <string name="canceled">cancelled</string>
+    <string name="new_">new</string>
+    <string name="suspended">suspended</string>
+    <string name="partially_filled">partially filled</string>
+    <string name="filled">filled</string>
+    <string name="expired">expired</string>
+    <string name="exit_confirmation">Tap back button again to exit</string>
+    <string name="about">About</string>
+    <string name="about_short">@string/about</string>
+    <string name="licenses">Licenses</string>
+    <string name="orderbook_selector_sum">Sum %s</string>
+    <string name="otp_code_request">Please enter the code from your 2FA app</string>
+    <string name="wrong_otp_code">Wrong code</string>
+
+    <string name="locked_balance_trading_balance">In order to view your orders, please set correct access rights for your API key.
+        \n
+        \nTo do that, check \“Order book, History, Trading balance\” box in API keys settings.</string>
+    <string name="locked_balance_place_cancel_orders">In order to view your balance, please set correct access rights for your API key.
+        \n
+        \nTo do that, check \“Place/cancel orders\” box in API keys settings.
+</string>
+    <string name="locked_exchange_key">In order to place/cancel orders, please set correct access rights for your API key.
+        \n
+        \nTo do that, check \“Place/cancel orders\” box in API keys settings.</string>
+    <string name="locked_history_key">In order to view your Payment History, please set correct access rights for your API key.
+        \n
+        \nTo do that, check \“Payment information\” box in API keys settings.
+    </string>
+    <string name="locked_reports_payment_history">In order to view your %s, please set correct access rights for your API key.
+        \n
+        \nTo do that, check \“Payment information\” box in API keys settings.
+    </string>
+    <string name="locked_withdraw_key">In order to view your orders, please set correct access rights for your API key.
+        \n
+        \nTo do that, check \“Withdraw cryptocurrencies\” box in API keys settings.
+    </string>
+    <string name="locked_deposit">In order to deposit cryptocurrency, please set correct access rights for your API key.
+        \n
+        \nTo do that, check \“Payment information\” box in API keys settings.
+    </string>
+    <string name="locked_active_orders_key">In order to view your orders, please set correct access rights for your API key.
+        \n
+        \nTo do that, check “Place/cancel orders” box in API keys settings.</string>
+    <string name="check_api_key">
+        Check API keys status in the settings on the website
+    </string>
+
+    <string name="order_already_canceled">Order already canceled</string>
+    <string name="deposit_hint_text">Use the following data to credit your account</string>
+    <string name="deposits_without_payment_id_will_be_lost">Deposits without %s will be lost!</string>
+    <string name="freewallet_text">Don’t have a wallet yet?\nGet yours with Freewallet</string>
+    <string name="show">Show</string>
+
+    <string name="period">Period</string>
+    <string name="no_main_account_with_a_balance_found">No main account with a balance found</string>
+    <string name="you_can_only_withdraw_funds_from_main_accounts">You can only withdraw funds from main accounts</string>
+    <string name="withdraw_trading_account_hint">If you want to withdraw funds in your trading accounts, first transfer them to a main account.</string>
+    <string name="search_currency_to_transfer">Search currency to transfer</string>
+    <string name="from_main_account">From main account</string>
+    <string name="go_to_account">Go to Account</string>
+    <string name="can_manage_in_settings">You can manage it in settings</string>
+    <string name="order_cancelled">Order has been already cancelled</string>
+    <string name="deposit_not_available">Deposit of %s is not available</string>
+    <string name="time_select_error">This time has already passed. Please, choose a valid time.</string>
+    <string name="withdraw_unavailable">Funds can only be withdrawn from the main account.\n\nTo withdraw, please transfer your funds from the trading account to the main account.</string>
+    <string name="withdraw_success_info">Withdrawn from main account.\nIt may take a few hours to \nprocess the transaction.</string>
+    <string name="transferred_from_trading_to_main_account">transferred from the trading account to the main account</string>
+    <string name="transferred_from_main_to_trading_accounts">transferred from the main account to the trading account</string>
+    <string name="popular_pairs_to_trade">Popular pairs to trade</string>
+    <string name="view_more_pairs">View more pairs</string>
+    <string name="withdraw_with_empty_main_acc">Funds can only be withdrawn from the main account.\n\nTo withdraw funds from trading accounts, first transfer them to a main account.</string>
+    <string name="tansfer_to_main_account">Transfer to main account</string>
+
+    <string name="select_indicators">Select indicators</string>
+
+
+    <string name="terms_of_use">Terms of Use</string>
+    <string name="terms_of_use_underlined"><u>Terms of Use</u></string>
+    <string name="change_pin">Change PIN</string>
+    <string name="PIN_changed">Your PIN was changed</string>
+    <string name="PIN_created">PIN created</string>
+    <string name="pin_confirm">Please confirm pin code</string>
+    <string name="amount_exceeds_available_balance">Amount exceeds available balance</string>
+    <string name="confirm_log_out">Confirm Log Out</string>
+    <string name="no_connection">Please check your Internet connection and try again</string>
+    <string name="show_indicators">Show indicators</string>
+    <string name="moving_average">Moving Average</string>
+    <string name="ma">MA</string>
+    <string name="ema">EMA</string>
+    <string name="moving_average_exponential">Moving Average Exponential</string>
+    <string name="bb">BB</string>
+    <string name="bollinger_bands">Bollinger Bands</string>
+    <string name="vol">VOL</string>
+    <string name="macd">MACD</string>
+    <string name="moving_average_convergence_divergence">Moving Average Convergence Divergence</string>
+    <string name="rsi">RSI</string>
+    <string name="relative_strength_index">Relative Strength Index</string>
+    <string name="see_status">See status</string>
+    <string name="track_your_transaction">Track your transaction</string>
+    <string name="top_24h_volume_pairs_with">Top 24h volume pairs with %s</string>
+    <string name="your">Your </string>
+    <string name="was_placed"> order was placed at </string>
+    <string name="was_rejected"> order was rejected —  </string>
+    <string name="manage_api_keys">Manage API keys</string>
+    <string name="log_in_using_your_google_account_to_enter_the_application">Log in using your Google account \nto enter the application</string>
+    <string name="privacy_policy_and_disclaimer">Privacy Policy and Disclaimer</string>
+    <string name="privacy_policy_and_disclaimer_underlined"><u>Privacy Policy and Disclaimer</u></string>
+    <string name="i_accept_the_terms">I accept the terms</string>
+    <string name="i_decline_the_terms">I decline the terms</string>
+    <string name="decline">Decline</string>
+    <string name="premium">Premium</string>
+    <string name="trade_on_all_currency_pairs_with_no_restrictions">Want more pairs than BTC/USD and have access to stock trading?</string>
+    <string name="privacy_policy_terms_of_use"><u><![CDATA[Privacy policy & Terms of use]]></u></string>
+    <string name="subscribtion_terms">Subscribtion terms:\n\nBy subscribing to a monthly payment, the user gets full access to trade with all currency pairs available in the application. The monthly subscription cost is %s</string>
+    <string name="binance_with_refcode">https://www.binance.com/en/register?ref=KIRJOOOX</string>
+    <string name="binance_redir_text">To start real trading, create an account\non the exchange.</string>
+    <string name="go_to_binance">Go to Binance</string>
+    <string name="privacy_policy">Privacy policy</string>
+    <string name="privacy_policy_underlined"><u>Privacy policy</u></string>
+    <string name="licence_url" translatable="false">https://www.privacypolicies.com/agreement/view/87395b344dc846d5a8bd4e79250ad421</string>
+    <string name="privacy_policy_url" translatable="false">https://www.privacypolicies.com/privacy/view/fabd848d4b0b5751aa13604ab2b5d5e2</string>
+    <string name="try_subscribtions_button">TRY FOR FREE</string>
+    <string name="days_trial">7 days trial then %s per month</string>
+    <string name="adjust_token" translatable="false">thepgjcil43k</string>
+    <string name="premium_subscribe">Premium Subscription</string>
+    <string name="remove_pin">Remove PIN</string>
+    <string name="set_pin">Set PIN</string>
+    <string name="dialog_remove_pin">Remove PIN?</string>
+    <string name="restore_purchases">Restore purchases</string>
+    <string name="stocks">Stocks</string>
+    <string name="crypto">Crypto</string>
 </resources>

@@ -11,11 +11,15 @@
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:layout_gravity="bottom"
+        android:background="@color/border_gray"
+        app:itemIconTint="@color/bottom_nav_color"
+        app:itemTextColor="@color/bottom_nav_color"
         app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/bottom_nav_menu" />
+        app:menu="@menu/bottom_menu_nav" />
+
     <TextView
         android:id="@+id/nav_host_fragment"
         android:name="androidx.navigation.fragment.NavHostFragment"

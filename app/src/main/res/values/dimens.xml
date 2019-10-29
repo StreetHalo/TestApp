@@ -1,5 +1,8 @@
-<resources>
-    <!-- Default screen margins, per the Android Design guidelines. -->
-    <dimen name="activity_horizontal_margin">16dp</dimen>
-    <dimen name="activity_vertical_margin">16dp</dimen>
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <dimen name="ask_bid">28dp</dimen>
+    <dimen name="ask_bid_recycler">224dp</dimen>
+    <dimen name="kek">1500dp</dimen>
+    <dimen name="design_bottom_navigation_text_size" tools:override="true">12sp</dimen>
+    <dimen name="design_bottom_navigation_active_text_size" tools:override="true">12sp</dimen>
 </resources>
